@@ -10,18 +10,27 @@ const Login = () => {
 
   const isUser = mode === 'user';
 
-  const handleLogin = (e) => {
+ const handleLogin = (e) => {
   e.preventDefault();
 
-  // تحقق وهمي مؤقت
-  if (email === 'user@test.com' && password === '123456') {
+  const savedUser = JSON.parse(localStorage.getItem('user'));
+
+  if (
+    savedUser &&
+    savedUser.email === email &&
+    savedUser.password === password &&
+    savedUser.role === mode
+  ) {
     localStorage.setItem('token', 'fake-jwt-token');
-    localStorage.setItem('role', mode); // user أو store
+    localStorage.setItem('role', savedUser.role);
+    localStorage.setItem('username', savedUser.username);
     navigate('/');
   } else {
-    alert('❌ البريد أو كلمة المرور غير صحيحة (تجريب)');
+    alert('❌ البريد أو كلمة المرور غير صحيحة');
   }
 };
+
+
 
 
   return (
