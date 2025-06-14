@@ -54,26 +54,43 @@ export const Login_Register = () => {
   const [mode, setMode] = useState('user'); // 'user' or 'store'
   const isUser = mode === 'user';
   const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+const [username, setUsername] = useState('');
+
+
+
 
   // حالات الإدخال
   const [passwordValue, setPasswordValue] = useState('');
   const [confirmPasswordValue, setConfirmPasswordValue] = useState('');
 
   const handleRegister = () => {
-    if (passwordValue.length < 6) {
-      toast.error('❌ كلمة المرور يجب أن تكون 6 أحرف أو أكثر');
-      return;
-    }
+  if (passwordValue.length < 6) {
+    toast.error('❌ كلمة المرور يجب أن تكون 6 أحرف أو أكثر');
+    return;
+  }
 
-    if (passwordValue !== confirmPasswordValue) {
-      toast.error('❌ كلمات المرور غير متطابقة');
-      return;
-    }
+  if (passwordValue !== confirmPasswordValue) {
+    toast.error('❌ كلمات المرور غير متطابقة');
+    return;
+  }
 
-    // تسجيل وهمي
-    toast.success('✅ تم إنشاء الحساب بنجاح (تجريبي)');
-    navigate('/login');
+  const userData = {
+    email,
+    password: passwordValue,
+    role: mode,
+    username,
   };
+
+  localStorage.setItem('user', JSON.stringify(userData));
+  localStorage.setItem('token', 'fake-jwt-token');
+  localStorage.setItem('role', userData.role);
+  localStorage.setItem('username', userData.username);
+
+  toast.success('✅ تم إنشاء الحساب وتسجيل الدخول');
+  navigate('/');
+};
+
 
   return (
     <div className="container">
@@ -100,12 +117,23 @@ export const Login_Register = () => {
       <div className="inputs">
         <div className="input">
           <img src={person} alt="User" />
-          <input type="text" placeholder="اسم المستخدم" />
+          <input
+  type="text"
+  placeholder="اسم المستخدم"
+  value={username}
+  onChange={(e) => setUsername(e.target.value)}
+/>
         </div>
 
         <div className="input">
           <img src={mail} alt="Email" />
-          <input type="email" placeholder="البريد الإلكتروني" />
+          <input
+  type="email"
+  placeholder="البريد الإلكتروني"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+/>
+
         </div>
 
         <div className="input">
