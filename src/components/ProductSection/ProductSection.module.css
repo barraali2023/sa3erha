@@ -1,0 +1,111 @@
+/* src/components/ProductSection/ProductSection.module.css */
+:root {
+  --main-bg:    #0f172a;
+  --card-bg:    #1e293b;
+  --text-primary:   #f1f5f9;
+  --text-secondary: #94a3b8;
+  --accent-blue:    #38bdf8;
+  --button-bg:      #38bdf8;
+  --button-text:    #0f172a;
+  --navbar-bg:      #1a2238;
+  --nav-text:       #fff;
+}
+
+/* 2) Light‐theme overrides */
+.light-theme {
+  --main-bg:        #ffffff;
+  --card-bg:        #f0f0f0;
+  --text-primary:   #1a1a1a;
+  --text-secondary: #4f4f4f;
+  --accent-blue:    #007BFF;
+  --button-bg:      #007BFF;
+  --button-text:    #ffffff;
+  --navbar-bg:      #f8f9fa;
+  --nav-text:       #333;
+}
+.productSection {
+    width: 90%; /* Takes up 90% of its parent's width */
+    max-width: 1200px; /* But not more than 1200px */
+    margin: 40px auto; /* 40px top/bottom margin, centered horizontally */
+    padding: 20px 0; /* Padding inside the section, top/bottom */
+    /* background-color: var(--main-bg); /* Inherits from body, but you could set it if needed */
+  }
+  
+  .header {
+    display: flex; /* Aligns title and "View All" link on the same line */
+    justify-content: space-between; /* Pushes title to left, link to right */
+    align-items: center; /* Vertically aligns items in the header */
+    margin-bottom: 25px; /* Space below the header before the product grid */
+  }
+  
+  .title {
+    font-size: 1.8em; /* Size of the section title (e.g., "Best Prices Today") */
+    font-weight: bold;
+    color: #f1f5f9; /* Using a light color for the title against dark bg */
+    margin: 0; /* Remove default margin from h2 */
+  }
+  
+  .viewAllLink {
+    color: var(--accent-blue, #00AEEF); /* Use the accent blue color */
+    text-decoration: none;
+    font-weight: bold;
+    display: flex; /* To align the text and arrow icon nicely */
+    align-items: center;
+    gap: 5px; /* Space between "View All" text and the arrow icon */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+  }
+  
+  .viewAllLink:hover {
+    color: #008cbf; /* Darker shade of blue on hover */
+    /* text-decoration: underline; */ /* Optional: underline on hover */
+  }
+  
+  .productsGrid {
+    display: grid; /* Use CSS Grid for the product card layout */
+    /*
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      - auto-fill: Creates as many columns as can fit in the available space.
+      - minmax(280px, 1fr): Each column will be at least 280px wide. If there's more space,
+        the '1fr' allows them to grow and share the extra space equally.
+        This makes the grid responsive.
+    */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px; /* Spacing between the product cards (both row and column gap) */
+    justify-content: center; /* Centers grid items if they don't fill the row completely */
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .productSection {
+      width: 95%; /* Use a bit more width on smaller screens */
+    }
+    .productsGrid {
+      /* For tablets, you might want to ensure at least 2 columns if space allows,
+         or adjust the minmax for card width */
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .header {
+      flex-direction: column; /* Stack title and "View All" link vertically */
+      align-items: flex-start; /* Align items to the start (left) */
+      gap: 10px; /* Space between title and link when stacked */
+    }
+    .title {
+      font-size: 1.6em; /* Slightly smaller title on small screens */
+    }
+    .productsGrid {
+      /* On very small screens, cards might go full width or a slightly smaller minmax */
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+    }
+  }
+  
+  @media (max-width: 380px) {
+    .productsGrid {
+      /* Ensure single column for very narrow screens if cards are too wide */
+       grid-template-columns: 1fr; /* Each card takes full width */
+    }
+  }

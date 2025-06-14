@@ -1,0 +1,159 @@
+
+/* Basic Reset */
+:root {
+  --main-bg:    #0f172a;
+  --card-bg:    #1e293b;
+  --text-primary:   #f1f5f9;
+  --text-secondary: #94a3b8;
+  --accent-blue:    #38bdf8;
+  --button-bg:      #38bdf8;
+  --button-text:    #0f172a;
+  --navbar-bg:      #1a2238;
+  --nav-text:       #fff;
+}
+
+/* 2) Light‐theme overrides */
+.light-theme {
+  --main-bg:        #ffffff;
+  --card-bg:        #f0f0f0;
+  --text-primary:   #1a1a1a;
+  --text-secondary: #4f4f4f;
+  --accent-blue:    #007BFF;
+  --button-bg:      #007BFF;
+  --button-text:    #ffffff;
+  --navbar-bg:      #f8f9fa;
+  --nav-text:       #333;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    background-color: #1a2238; /* Dark blue background */
+    height: 65px;
+    display: flex;
+    justify-content: center; /* Center the container */
+    align-items: center;
+    font-size: 1.1rem;
+    position: sticky; /* Optional: Makes navbar stick to top */
+    top: 0;
+    z-index: 999; /* Ensure it's above other content */
+    width: 100%;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between; /* Key for spacing elements */
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    max-width: 1500px; /* Adjust max-width as needed */
+    padding: 0 50px; /* Padding on the sides */
+  }
+  
+  /* Logo */
+  .navbar-logo {
+    color: #4fc3f7; /* Light blue/cyan color */
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  /* Navigation Menu (UL) */
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    /* margin-right: auto; Pushes right elements further right if needed */
+  }
+  
+  /* Individual Nav Item (LI) */
+  .nav-item {
+    height: 80px; /* Match navbar height */
+    display: flex; /* To help vertical alignment */
+    align-items: center; /* To help vertical alignment */
+  }
+  
+  /* Navigation Links (a, Link) */
+  .nav-links {
+    color: #fff; /* White text */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    white-space: nowrap; /* Prevent wrapping */
+    display: flex; /* Align icon and text */
+    align-items: center; /* Align icon and text */
+  }
+  
+  .nav-links:hover {
+    color: #007bff; /* Lighter gray on hover */
+    transition: all 0.2s ease-out;
+  }
+  
+  /* Icon specific styling */
+  .nav-icon-cart {
+    margin-right: 8px; /* Space between cart icon and text */
+  }
+  
+  /* Right Side Container */
+  .nav-right-side {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Settings Icon */
+  .nav-icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 1rem; /* Spacing */
+  }
+  
+  .nav-icon-settings {
+    color: #ffeb3b; /* Yellow color */
+    font-size: 1.5rem; /* Adjust size */
+  }
+  .nav-icon-button:hover .nav-icon-settings {
+      color: #fff350; /* Slightly brighter yellow on hover */
+  }
+  
+  
+  /* Language Button */
+  .language-button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1rem; /* Match nav-links */
+    margin: 0 0.5rem; /* Spacing */
+  }
+  .language-button:hover {
+      color: #007bff;
+  }
+  
+  /* Register Button Styling */
+  .nav-button {
+    padding: 8px 20px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    margin-left: 1rem; /* Space before the button */
+    transition: all 0.3s ease-out;
+    white-space: nowrap;
+  }
+  
+  .register-button {
+    background-color: #007bff; /* Blue background */
+  }
+  
+  .register-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }

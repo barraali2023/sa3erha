@@ -1,0 +1,73 @@
+/* src/components/HeroSection/HeroSection.module.css */
+.hero {
+    background-color: var(--main-bg, #0A192F);
+    color: var(--text-primary, #CCD6F6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh; /* Adjust as needed */
+    /* padding: 80px 20px 40px; NO PADDING-TOP HERE, App.js's main content div will handle it */
+    padding: 20px 20px 40px; /* Top padding is handled by the main content wrapper */
+    text-align: center;
+  }
+  
+  .heroContent {
+    max-width: 700px;
+  }
+  
+  .title {
+    font-size: 4em; /* Large title */
+    font-weight: bold;
+    color:  #f1f5f9; /* White title */
+    margin-bottom: 20px;
+  }
+  
+  .tagline {
+    font-size: 1.2em;
+    color: var(--text-secondary, #8892B0);
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .searchContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px; /* Limit search bar width */
+    margin: 0 auto;
+  }
+  
+  .searchInput {
+    flex-grow: 1;
+    padding: 15px 20px;
+    font-size: 1em;
+    border: 1px solid #233554; /* Darker border */
+    border-radius: 5px 0 0 5px;
+    background-color: #172A45; /* Dark input background */
+    color: var(--text-primary, #CCD6F6);
+    outline: none;
+  }
+  .searchInput::placeholder {
+    color: var(--text-secondary, #8892B0);
+  }
+  
+  
+  .searchButton {
+    padding: 15px 25px;
+    font-size: 1em;
+    background-color: var(--button-bg, #00AEEF);
+    color: var(--button-text, #FFFFFF);
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .searchButton:hover {
+    background-color: #008cbf;
+  }

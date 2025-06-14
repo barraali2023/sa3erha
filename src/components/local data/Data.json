@@ -1,0 +1,132 @@
+{
+  "bestPriceProductsData": [
+    {
+      "Product_id": 101,
+      "name": "Smart LED Desk Lamp",
+      "brand": "BrightLife",
+      "image": "https://cdn.images.fecom-media.com/FE00006284/images/Flexible%20Desk%20Lamp_7vp_3EfGQk.jpg",
+      "category": "Home Office",
+      "bar_code": "555444333222",
+      "description": "Adjustable brightness and color temperature, USB charging port. Energy efficient.",
+      "datetime_of_insert": "2023-10-26T09:30:00Z",
+      "general_type": "Best Price",
+      "account_id": 205,
+      "bestPrice": "$24.99",
+      "stores": [
+        {"name": "Office Hub", "logo": "🏢", "price": "$24.99", "isBest": true},
+        {"name": "Light World", "logo": "💡", "price": "$25.50", "isBest": false},
+        {"name": "Tech Den", "logo": "💻", "price": "$26.00", "isBest": false}
+      ]
+    },
+    {
+      "Product_id": 102,
+      "name": "Reusable Silicone Food Bags (Set of 4)",
+      "brand": "EcoKitchen",
+      "image": "https://th.bing.com/th/id/R.93ef68d3408a30d881ec600bf9571596?rik=VdaeLtjobTsQdw&pid=ImgRaw&r=0",
+      "category": "Kitchen",
+      "bar_code": "666777888999",
+      "description": "Leakproof, freezer and microwave safe. Eco-friendly alternative to plastic bags.",
+      "datetime_of_insert": "2023-10-26T11:00:00Z",
+      "general_type": "Discounted",
+      "account_id": 210,
+      "bestPrice": "$12.50",
+      "stores": [
+        {"name": "Kitchen Green", "logo": "🌿", "price": "$12.50", "isBest": true},
+        {"name": "Home Goods+", "logo": "🏠", "price": "$13.00", "isBest": false}
+      ]
+    },
+    {
+      "Product_id": 103,
+      "name": "High-Speed HDMI Cable (6ft)",
+      "brand": "ConnectX",
+      "image": "https://www.cablematters.com/Blog/image.axd?picture=/HDMI-Cable-Types.jpg",
+      "category": "Electronics Accessories",
+      "bar_code": "111000222333",
+      "description": "Supports 4K resolution at 60Hz, Ethernet, and Audio Return Channel (ARC).",
+      "datetime_of_insert": "2023-10-25T14:15:00Z",
+      "general_type": "Best Price",
+      "account_id": 205,
+      "bestPrice": "$7.95",
+      "stores": [
+        {"name": "ElectroMart", "logo": "⚡", "price": "$7.95", "isBest": true},
+        {"name": "AV World", "logo": "📺", "price": "$8.50", "isBest": false},
+        {"name": "Cables R Us", "logo": "🔌", "price": "$8.25", "isBest": false},
+        {"name": "Online Deals", "logo": "🛒", "price": "$8.00", "isBest": false}
+      ]
+    }
+  ],
+  "trendingProductsData": [
+    {
+      "Product_id": 201,
+      "name": "Wireless Noise-Cancelling Headphones",
+      "brand": "SoundWave",
+      "image": "images/headphones_sw_01.jpg",
+      "category": "Electronics",
+      "bar_code": "123456789012",
+      "description": "Experience immersive sound with advanced noise cancellation. Bluetooth 5.0, 20-hour battery life.",
+      "datetime_of_insert": "2023-10-27T10:00:00Z",
+      "general_type": "Trending",
+      "account_id": 101,
+      "bestPrice": "$149.00",
+      "stores": [
+        {"name": "Audio Bliss", "logo": "🎧", "price": "$149.00", "isBest": true},
+        {"name": "Tech Giant", "logo": "💻", "price": "$155.00", "isBest": false},
+        {"name": "Sound Store", "logo": "🔊", "price": "$152.50", "isBest": false}
+      ]
+    },
+    {
+      "Product_id": 202,
+      "name": "Portable Espresso Maker",
+      "brand": "AeroBrew",
+      "image": "images/espresso_ab_01.jpg",
+      "category": "Kitchen Appliances",
+      "bar_code": "987000111222",
+      "description": "Compact manual espresso maker, perfect for travel and camping. No batteries or electricity needed.",
+      "datetime_of_insert": "2023-10-27T14:20:00Z",
+      "general_type": "Hot",
+      "account_id": 105,
+      "bestPrice": "$45.99",
+      "stores": [
+        {"name": "Coffee Craze", "logo": "☕", "price": "$47.00", "isBest": false},
+        {"name": "Outdoor Gear", "logo": "🏕️", "price": "$45.99", "isBest": true},
+        {"name": "Kitchen Depot", "logo": "🍳", "price": "$48.50", "isBest": false}
+      ]
+    },
+    {
+      "Product_id": 203,
+      "name": "Smartwatch Fitness Tracker",
+      "brand": "FitPulse",
+      "image": "images/smartwatch_fp_01.png",
+      "category": "Wearable Technology",
+      "bar_code": "333111444555",
+      "description": "Tracks heart rate, steps, sleep, and multiple sports modes. Waterproof.",
+      "datetime_of_insert": "2023-10-27T15:00:00Z",
+      "general_type": "Trending",
+      "account_id": 101,
+      "bestPrice": "$99.99", 
+      "stores": [            
+        {"name": "Fit Gear", "logo": "⌚", "price": "$99.99", "isBest": true},
+        {"name": "Tech Spot", "logo": "💻", "price": "$105.00", "isBest": false},
+        {"name": "Sport World", "logo": "🏃", "price": "$102.50", "isBest": false}
+      ]
+    },
+    {
+        "Product_id": 204,
+        "name": "Organic Matcha Green Tea Powder",
+        "brand": "Zen Garden",
+        "image": "images/matcha_zg_01.png",
+        "category": "Groceries",
+        "bar_code": "987654321098",
+        "description": "Premium ceremonial grade matcha, sourced from Japan. Rich in antioxidants.",
+        "datetime_of_insert": "2023-10-27T10:05:30Z",
+        "general_type": "Popular",
+        "account_id": 102,
+        "bestPrice": "$19.95", 
+        "stores": [          
+          {"name": "Zen Mart", "logo": "🍵", "price": "$19.95", "isBest": true},
+          {"name": "Healthy Living", "logo": "🌱", "price": "$21.00", "isBest": false},
+          {"name": "GrocerOnline", "logo": "🛒", "price": "$20.50", "isBest": false}
+        ]
+      }
+  ]
+}

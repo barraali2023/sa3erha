@@ -1,0 +1,139 @@
+/* Reset & base styling (generally good practice, but be mindful of global scope) */
+* {
+    box-sizing: border-box;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */ /* Usually set globally, commented out here */
+  }
+  
+  /*
+    The .container is now styled to be a modal/popup.
+    To make it appear/disappear, you'll use JavaScript (e.g., React state)
+    to conditionally render it or toggle a class that sets 'display: none/flex;'.
+  */
+  body{background-color: #0f172a;}
+  .container {
+    /* --- POPUP BEHAVIOR MODIFICATIONS --- */
+    position: fixed; /* Position relative to the viewport */
+    top: 55%;        /* Move top edge to 50% of viewport height */
+    left: 50%;       /* Move left edge to 50% of viewport width */
+    transform: translate(-50%, -50%); /* Shift back by half its own width/height to center */
+    z-index: 1000;   /* Ensure it's on top of other content */
+  
+    max-height: 90vh; /* Max height to fit viewport and prevent overflow */
+    overflow-y: auto;  /* Allow internal scrolling if content is too tall */
+    max-width: 90vw;   /* Max width for responsiveness on small screens */
+    
+    /* --- ORIGINAL APPEARANCE STYLES (from your provided CSS) --- */
+    background-color: #1e293b;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 28rem; /* This will be capped by max-width if viewport is too small */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 10px 15px rgba(0, 0, 0, 0.25); /* Enhanced shadow for popup */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f1f5f9; /* Default text color for content inside */
+  }
+  
+  /* Header within the container */
+  .header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .text {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  
+  /* Input fields section */
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.2rem;
+  }
+  
+  .input { /* This is the group for icon + input field */
+    display: flex;
+    align-items: center;
+    background-color: #334155;
+    border-radius: 0.8rem;
+    padding: 0.8rem 1rem; /* Adjusted padding slightly */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent; /* For focus effect */
+  }
+  
+  .input:hover {
+    background-color: #475569;
+  }
+  
+  .input:focus-within { /* Style when the input inside this group is focused */
+    background-color: #475569;
+    box-shadow: 0 0 0 2px #38bdf8; /* Highlight focus */
+    border-color: #38bdf8;
+  }
+  
+  .input img { /* Styling for icons if you use <img> tags */
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+    /* Example: if your icons are black SVGs and you want them white-ish: */
+    /* filter: brightness(0) invert(0.8) sepia(0.5) saturate(500%) hue-rotate(180deg); */
+    /* Or, for a simpler white: filter: brightness(0) invert(1); */
+    /* If using font icons (like react-icons), style them directly with 'color' */
+  }
+  
+  .input input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #f1f5f9;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  .input input::placeholder {
+    color: #94a3b8;
+    opacity: 0.7; /* Make placeholder text slightly less prominent */
+  }
+  
+  /* Submit button */
+  .submit {
+    margin-top: 1.8rem;
+    background-color: #38bdf8;
+    color: #0f172a;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.9rem; /* Slightly more padding */
+    border-radius: 0.8rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    border: none; /* Ensure no default border */
+    font-size: 1.05rem;
+  }
+  
+  .submit:hover {
+    background-color: #0ea5e9;
+  }
+  .submit:active {
+    transform: scale(0.98); /* Click feedback */
+  }
+  
+  /* Forgot password link */
+  .forgot_password {
+    margin-top: 1.2rem; /* Adjusted margin */
+    font-size: 0.9rem;
+    color: #285ba8;
+    text-decoration: none; /* No underline by default */
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .forgot_password:hover {
+    color: #3068ae;
+    text-decoration: underline; /* Underline on hover for affordance */
+  }
+ 
+ 

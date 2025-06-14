@@ -1,0 +1,144 @@
+/* src/components/ProductCard/ProductCard.module.css */
+:root {
+  --main-bg:    #0f172a;
+  --card-bg:    #1e293b;
+  --text-primary:   #f1f5f9;
+  --text-secondary: #94a3b8;
+  --accent-blue:    #38bdf8;
+  --button-bg:      #38bdf8;
+  --button-text:    #0f172a;
+  --navbar-bg:      #1a2238;
+  --nav-text:       #fff;
+}
+
+/* 2) Light‐theme overrides */
+.light-theme {
+  --main-bg:        #ffffff;
+  --card-bg:        #f0f0f0;
+  --text-primary:   #1a1a1a;
+  --text-secondary: #4f4f4f;
+  --accent-blue:    #007BFF;
+  --button-bg:      #007BFF;
+  --button-text:    #ffffff;
+  --navbar-bg:      #f8f9fa;
+  --nav-text:       #333;
+}
+.card {
+    background-color: var(--card-bg, #172A45);
+    border-radius: 8px;
+    overflow: hidden;
+    color: var(--text-primary, #CCD6F6);
+    width: 280px; /* Fixed width for cards */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  }
+  
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    height: 180px; /* Fixed height for images */
+    background-color: #0A192F; /* Placeholder if image is transparent or fails */
+  }
+  
+  .productImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area, might crop */
+  }
+  
+  .bestPriceBanner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 174, 239, 0.85); /* Semi-transparent accent blue */
+    color: var(--button-text, #FFFFFF);
+    padding: 8px 12px;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .cardContent {
+    padding: 15px;
+  }
+  
+  .productName {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--button-text, #FFFFFF);
+    margin-top: 0;
+    margin-bottom: 8px;
+    min-height: 2.4em; /* Ensure space for two lines */
+  }
+  
+  .productDescription {
+    font-size: 0.85em;
+    color: var(--text-secondary, #8892B0);
+    margin-bottom: 15px;
+    height: 3.6em; /* Approx 3 lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  
+  .storesList {
+    font-size: 0.9em;
+  }
+  
+  .storeEntry {
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid #233554; /* Separator */
+  }
+  .storeEntry:last-child {
+    border-bottom: none;
+  }
+  
+  .storeLogo {
+    margin-right: 8px;
+    font-size: 1.1em; /* For emoji logos */
+  }
+  
+  .storeName {
+    flex-grow: 1;
+    color: var(--text-primary, #CCD6F6);
+  }
+  
+  .checkIcon {
+    color: var(--accent-green, #64FFDA); /* Green checkmark */
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  .storePrice {
+    font-weight: bold;
+    color: var(--button-text, #FFFFFF);
+  }
+  
+  .bestOffer .storePrice {
+    color: var(--accent-green, #64FFDA); /* Highlight best price */
+  }
+  .bestOffer .storeName {
+    font-weight: bold; /* Optionally bold the best store name */
+  }
+  
+  
+  .moreStores {
+    text-align: right;
+    font-size: 0.8em;
+    color: var(--text-secondary, #8892B0);
+    margin-top: 8px;
+    cursor: pointer;
+  }
+  .moreStores:hover {
+    color: var(--accent-blue);
+  }

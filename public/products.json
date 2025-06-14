@@ -1,0 +1,54 @@
+{
+  "grocery_items": [
+    {
+      "product_id": 1,
+      "name": "Milk",
+      "brand": "DairyPure",
+      "image": "https://dairypure.com/wp-content/uploads/2020/04/DairyPure-Whole-Milk.png",
+      "category": "Dairy",
+      "price": 9.99,
+      "bar_code": "0123456789012",
+      "description": "Fresh whole milk, rich in calcium."
+    },
+    {
+      "product_id": 2,
+      "name": "Bread",
+      "brand": "Wonder",
+      "image": "https://www.wonderbread.com/wp-content/uploads/2020/08/Wonder-Classic-White-Bread.png",
+      "category": "Bakery",
+      "price": 9.99,
+      "bar_code": "0123456789013",
+      "description": "Soft white bread, perfect for sandwiches."
+    },
+    {
+      "product_id": 3,
+      "name": "Eggs",
+      "brand": "Eggland's Best",
+      "image": "https://www.egglandsbest.com/wp-content/uploads/2020/04/EB-Classic-Dozen.png",
+      "category": "Dairy",
+      "price": 9.99,
+      "bar_code": "0123456789014",
+      "description": "Large brown organic eggs."
+    },
+    {
+      "product_id": 4,
+      "name": "Chicken Breast",
+      "brand": "Perdue",
+      "image": "https://www.perdue.com/product-images/10028-Perdue-Fresh-Boneless-Skinless-Chicken-Breast.png",
+      "category": "Meat",
+      "price": 9.99,
+      "bar_code": "0123456789016",
+      "description": "Boneless, skinless chicken breasts."
+    },
+    {
+      "product_id": 5,
+      "name": "Orange Juice",
+      "brand": "Tropicana",
+      "image": "https://www.tropicana.com/content/dam/nagbrands/us/tropicana/en/Products/Orange_Juice/Original/59oz_Tropicana_Original.png",
+      "category": "Beverages",
+      "price": 9.99,
+      "bar_code": "0123456789017",
+      "description": "100% pure squeezed orange juice."
+    }
+  ]
+}

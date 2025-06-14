@@ -1,0 +1,73 @@
+/* src/App.css (or your main global CSS file) */
+
+/* Basic Reset & Body Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--main-bg);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for body */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* Will be overridden by more specific link styles or var(--text-primary) */
+}
+
+/* --- Default (Dark) Theme Variables --- */
+/* These apply when no 'light-theme' class is on the html element */
+:root {
+  --main-bg: #0A192F;
+  --navbar-bg: #0A192F; /* Or #1a2238 as in your Navbar.css example */
+  --card-bg: #172A45;
+  --text-primary: #CCD6F6;
+  --text-secondary: #8892B0;
+  --accent-blue: #38bdf8;   /* Using one of your blue definitions */
+  --accent-green: #64FFDA;
+  --button-bg: #38bdf8;
+  --button-text: #0f172a;   /* Text on accent blue button for dark theme */
+  --nav-text: #CCD6F6;      /* General nav text */
+  --link-color: #CCD6F6;
+  --link-hover-color: var(--accent-blue);
+  --icon-color: #CCD6F6;
+  --icon-hover-color: var(--accent-blue);
+  --border-color: #304A6D;
+  --product-name-color: #f1f5f9; /* Example: Product name might be brighter */
+  --store-price-color: #f1f5f9; /* Example: Store price text */
+}
+
+/* --- Light Theme Overrides --- */
+/* These apply when 'light-theme' class is present on the html element */
+html.light-theme {
+  --main-bg: #FFFFFF;
+  --navbar-bg: #F8F9FA;
+  --card-bg: #F0F0F0;       /* Lighter card */
+  --text-primary: #1A1A1A;   /* Dark text */
+  --text-secondary: #4F4F4F;
+  --accent-blue: #007BFF;
+  --accent-green: #28C76F;   /* A green suitable for light theme */
+  --button-bg: #007BFF;
+  --button-text: #FFFFFF;    /* White text on blue button */
+  --nav-text: #1A1A1A;       /* Dark nav text */
+  --link-color: #1A1A1A;
+  --link-hover-color: var(--accent-blue);
+  --icon-color: #4B4F56;
+  --icon-hover-color: var(--accent-blue);
+  --border-color: #DADDE1;
+  --product-name-color: #1A1A1A;
+  --store-price-color: #1A1A1A;
+}
+
+/*
+  Remove example component styles like .navbar, .navbar-logo etc. from THIS global file.
+  Those should be in their respective component CSS files (e.g., Navbar.css)
+  but they should USE the variables defined above.
+*/
